@@ -3,187 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Builder Company</title>
+    <title>Home Builder Company | Custom Contracting</title><link rel="icon" type="image/png" href="images/GVCH_logo.png">
     <style>
-body {
-     font-family: Arial, sans-serif;
-     margin: 0;
-        padding: 0;
-        background-color: #a9b8bb; /* Light teal background */
-        color: #333;
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a9b8bb; 
+            color: #333;
+            /* Prevents horizontal scroll on animations */
+            overflow-x: hidden; 
         }
         .header {
-            background: linear-gradient(120deg, #004d40, #00796b); /* Gradient background for elegance */
-            color: #fff; /* White text for contrast */
-            padding: 40px; /* Adds more space around the content */
-            text-align: center; /* Centers the text */
-            border-bottom: 6px solid #004d40; /* Bold decorative border */
-            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* Adds depth with shadow */
-            font-family: 'Georgia', serif; /* Elegant serif font */
-            animation: glowEffect 3s infinite alternate; /* Gentle glowing animation */
+            background: linear-gradient(120deg, #004d40, #00796b);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 6px solid #002e26;
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+            font-family: 'Georgia', serif;
         }
 
-.header h1 {
-    font-size: 2em; /* Makes the header title more prominent */
-    letter-spacing: 3px; /* Adds sophistication */
-    text-transform: uppercase; /* Makes the title bold and professional */
-    margin: 0;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); /* Adds depth to the text */
-}
-
-.header p {
-    font-size: 1.5em; /* Slightly larger font for subheading */
-    margin-top: 15px;
-    font-style: italic; /* Adds elegance */
-}
-.nav {
-     display: flex;
-    justify-content: center;
-    background-color: #004d40; /* Darker teal for navigation */
-    padding: 10px;
-}
-.nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
- }
-.nav a:hover {
-     text-decoration: underline;
-}
-.container {
-    position: relative; /* Allows positioning of child elements */
-     display: flex;
-    justify-content: center;
-    align-items: center;
-     height: 60vh; /* Height for centering the image */
+        .header h1 {
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
         }
 
-.house-image {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3), 
-                 5px 5px 15px rgba(0, 0, 0, 0.3), 
-                 0px 10px 15px rgba(0, 0, 0, 0.3); /* Shadows on left, right, and bottom */
-}
-    .overlay-left {
-    position: absolute; /* Positions the section relative to the container */
-    top: 10%; /* Aligns the section slightly below the top of the container */
-    left: 5%; /* Aligns the section to the left side of the image */
-    width: 30%; /* Makes the section span 30% of the width */
-    background-color: rgba(216, 223, 224, 0.6); /* Semi-transparent light tan color (tan RGB: 210, 180, 140) */
-    padding: 15px; /* Adds spacing inside the section */
-    border-radius: 8px; /* Adds rounded corners for aesthetics */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds a subtle drop shadow */
-    color: #333; /* Text color */
-    z-index: 10; /* Ensures this section appears above the image */
-    text-align: left; /* Aligns text to the left */
-    }
-
-    .house-image {
-        max-width: 100%;
-         height: 100%;
-            
-    }
-    .footer {
-        background-color: #668380; /* Teal footer */
-        color: white;
-         text-align: center;
-        padding: 5px;
-        margin-top:20px;
-        position: fixed;
-        bottom: 0;
-         width: 100%;
-     }
-    .new-section {
-        display: flex;
-         justify-content: space-around;
-        padding: 20px;
-        padding-top:50x;
-        background-color: #e0f7fa;
+        .header p {
+            font-size: 1.2em;
+            margin-top: 15px;
+            font-style: italic;
+            opacity: 0.9;
         }
-    .subsection {
-        text-align: center;
-        flex: 1; /* Ensures equal width for subsections */
-        margin: 0 10px;
-        background-color: #ffffff;
-         border: 1px solid #ccc;
-         padding: 10px;
-     }
-        /* Animation for Section One sliding in from the left */
-    .subsection:nth-child(1) {
-        animation: slideInFromLeft 1.5s ease-out; /* Apply slide-in animation */
-    }
-        /* No animation for Section Two */
-    .subsection:nth-child(2) {
-            /* No animation rules */
-    }
-        /* Animation for Section Three sliding in from the right */
-    .subsection:nth-child(3) {
-        animation: slideInFromRight 1.5s ease-out;
-    }
-   
 
-        /* Keyframes for sliding in from the left */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004d40;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #80cbc4;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            background: #2c3e50; /* Fallback if image doesn't load */
+        }
+
+        .house-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+
+        .overlay-left {
+            position: absolute;
+            top: 15%;
+            left: 5%;
+            width: 35%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 10px 10px 0px #004d40;
+            color: #333;
+            z-index: 10;
+            text-align: left;
+        }
+
+        .new-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 20px;
+            background-color: #f4f7f6;
+        }
+
+        .subsection {
+            text-align: center;
+            flex: 1;
+            margin: 0 15px;
+            background-color: #ffffff;
+            border-top: 5px solid #00796b;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* NEW PROCESS SECTION */
+        .process-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .process-step {
+            padding: 20px;
+        }
+
+        .step-number {
+            font-size: 2em;
+            color: #00796b;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #002e26;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Animations */
+        .subsection:nth-child(1) { animation: slideInFromLeft 1.2s ease-out; }
+        .subsection:nth-child(3) { animation: slideInFromRight 1.2s ease-out; }
+
         @keyframes slideInFromLeft {
-            from {
-                transform: translateX(-100%); /* Start off-screen to the left */
-                opacity: 0; /* Start transparent */
-            }
-            to {
-                transform: translateX(0); /* End in original position */
-                opacity: 1; /* Fully visible */
-            }
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-        /* Keyframes for sliding in from the right */
         @keyframes slideInFromRight {
-            from {
-                transform: translateX(100%); /* Start off-screen to the right */
-                opacity: 0; /* Start transparent */
-            }
-            to {
-                transform: translateX(0); /* End in original position */
-                opacity: 1; /* Fully visible */
-            }
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
+
     <section class="header">
-        <h1>Welcome to Our Home Builder Company</h1>
-        <p>Your trusted partner in building dream homes.</p>
+        <h1>Grand View Custom Homes</h1> 
+        <p>Crafting Legacies Through Superior Architecture & Design</p>
     </section>
+
     <section class="nav">
         <a href="#">Home</a>
-        <a href="#">Our Services</a>
-        <a href="#">Gallery</a>
+        <a href="portfolios.html">Portfolios</a>
+        <a href="#">Our Process</a>
         <a href="#">Contact Us</a>
     </section>
+
     <section class="container">
         <section class="overlay-left">
-            <h2>New Section</h2>
-            <p>This is the content for the new section, positioned on the left side of the image.</p>
+            <h2>Built to Last</h2>
+            <p>From modern minimalist estates to classic family manors, we specialize in high-performance contracting that prioritizes energy efficiency, structural integrity, and your unique lifestyle.</p>
+            <button style="background:#00796b; color:white; border:none; padding:10px 20px; cursor:pointer; font-weight:bold;">Start Your Consultation</button>
         </section>
-        <img src="house-image.jpg" alt="House Image" class="house-image">
+        <img src="house-image.jpg" alt="Luxury Custom Home" class="house-image">
     </section>
-    <!-- New section below the image -->
+
     <section class="new-section">
         <div class="subsection">
-            <h2>Section One</h2>
-            <p>Content for Section One.</p>
+            <h2 style="color:#00796b;">Premium Materials</h2>
+            <p>We partner with top-tier suppliers to ensure every foundation, frame, and finish meets the highest standards of durability and luxury.</p>
         </div>
         <div class="subsection">
-            <h2>Section Two</h2>
-            <p>Content for Section Two.</p>
+            <h2 style="color:#00796b;">Expert Management</h2>
+            <p>Our dedicated project managers keep your build on schedule and under budget with weekly transparent reporting and site updates.</p>
         </div>
         <div class="subsection">
-            <h2>Section Three</h2>
-            <p>Content for Section Three.</p>
+            <h2 style="color:#00796b;">Fully Certified</h2>
+            <p>Licensed, bonded, and insured. We navigate the complex permits and local regulations so you can focus on choosing your finishes.</p>
         </div>
     </section>
+
+    <section class="process-section">
+        <h2 style="font-family:'Georgia', serif; font-size: 2em;">How We Build Your Dream</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="step-number">01</span>
+                <h3>Consultation</h3>
+                <p>We discuss your vision, budget, and lot requirements to create a blueprint for success.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-number">02</span>
+                <h3>Design & Permitting</h3>
+                <p>Our architects refine the plans while we handle all the city paperwork and approvals.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-number">03</span>
+                <h3>Construction</h3>
+                <p>Watch your dream take shape with skilled craftsmanship at every stage of the build.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-number">04</span>
+                <h3>Handover</h3>
+                <p>A final walkthrough to ensure every detail is perfect before we hand you the keys.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="footer">
-        <p>&copy; 2025 Home Builder Company. All rights reserved.</p>
+        <p>&copy; 2025 Grand View Builders. All rights reserved. | 123 Builder Lane, City, State</p>
     </section>
+
 </body>
 </html>
