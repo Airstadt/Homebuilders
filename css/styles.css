@@ -258,13 +258,7 @@
     opacity: 0.9;
 }
 
-/* Mobile Fix: Stacks logo and text on small screens */
-@media (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+
 /* 1. Define the Bold Animation */
 @keyframes boldEntrance {
     0% {
@@ -391,3 +385,74 @@
             from { transform: translateX(50px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
+
+    /* Mobile Fix: Stacks logo and text on small screens */
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    
+    /* 1. Adjust Header Text Size */
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    /* 2. Make Navigation Stack Vertically or Wrap */
+    .nav {
+        flex-wrap: wrap; /* Allows links to go to next line if needed */
+        padding: 10px;
+    }
+    
+    .nav a {
+        margin: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    /* 3. FIX THE "BUILT TO LAST" OVERLAY */
+    /* On mobile, we move it from 'absolute' to 'relative' so it sits 
+       naturally above or below the image instead of covering it. */
+    .container {
+        height: auto; /* Let content dictate height */
+        flex-direction: column;
+    }
+
+    .overlay-left {
+        position: relative; /* Replaces absolute */
+        top: 0;
+        left: 0;
+        width: 100%; /* Take up full width */
+        box-sizing: border-box;
+        box-shadow: none; /* Shadow looks messy on full-width mobile */
+        border-radius: 0;
+        padding: 40px 20px;
+    }
+
+    .house-image {
+        height: 300px; /* Give the image a fixed height on mobile */
+    }
+
+    /* 4. STACK THE THREE SUBSECTIONS */
+    .new-section {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .subsection {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    /* 5. PROCESS GRID ADJUSTMENTS */
+    .process-grid {
+        grid-template-columns: 1fr; /* Force one column only */
+        gap: 30px;
+    }
+
+    /* 6. FOOTER ADJUSTMENTS */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+}
